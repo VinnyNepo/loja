@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD de Produtos e Livros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>CRUD de Produtos e Livros</h1>
+      <p>Gerencie produtos e livros em duas abas separadas.</p>
+    </header>
+
+    <div class="tabs">
+      <button id="tab-produtos" class="tab active" type="button">Produtos</button>
+      <button id="tab-livros" class="tab" type="button">Livros</button>
+    </div>
+
+    <section id="produtos-pane" class="pane active">
+      <h2>Cadastro de Produtos</h2>
+      <form id="form-produto" class="form-card">
+        <input type="hidden" id="produto-id">
+
+        <label>
+          Nome:
+          <input type="text" id="produto-nome" required>
+        </label>
+
+        <label>
+          Preço:
+          <input type="number" id="produto-preco" step="0.01" required>
+        </label>
+
+        <label>
+          Estoque:
+          <input type="number" id="produto-estoque" value="0" required>
+        </label>
+
+        <div class="botoes">
+          <button type="submit" id="btn-salvar-produto">Salvar</button>
+          <button type="button" id="btn-cancelar-produto" hidden>Cancelar</button>
+        </div>
+      </form>
+
+      <h2>Lista de Produtos</h2>
+      <table id="tabela-produtos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="livros-pane" class="pane">
+      <h2>Cadastro de Livros</h2>
+      <form id="form-livro" class="form-card">
+        <input type="hidden" id="livro-id">
+
+        <label>
+          Título:
+          <input type="text" id="livro-nome" required>
+        </label>
+
+        <label>
+          Preço:
+          <input type="number" id="livro-preco" step="0.01" required>
+        </label>
+
+        <label>
+          Estoque:
+          <input type="number" id="livro-estoque" value="0" required>
+        </label>
+
+        <div class="botoes">
+          <button type="submit" id="btn-salvar-livro">Salvar</button>
+          <button type="button" id="btn-cancelar-livro" hidden>Cancelar</button>
+        </div>
+      </form>
+
+      <h2>Lista de Livros</h2>
+      <table id="tabela-livros">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
